@@ -12,6 +12,7 @@ import retrofit2.Response;
 
 /**
  * Created by marko on 5/15/2016.
+ * Presenter class to hold business logic for SubmitReviewDialogFragment
  */
 public class SubmitReviewPresenter {
     private static final String TAG = "SubmitReviewPresenter";
@@ -31,7 +32,11 @@ public class SubmitReviewPresenter {
     }
 
     public void submitReview(String reviewText, float rating) {
+
+        //User token is mocked
         String userToken = mGygSharedPreferences.getUserToken();
+
+        //construct past payload
         PostReview postReview = new PostReview(mTourId, userToken, reviewText, rating);
         Call<PostReview> postReviewRequest = mGygService.postReview(postReview);
         postReviewRequest.enqueue(new Callback<PostReview>() {

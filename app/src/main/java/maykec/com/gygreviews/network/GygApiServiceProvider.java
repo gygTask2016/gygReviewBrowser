@@ -14,9 +14,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by marko on 5/15/2016.
+ * Helper class to setup and provide api service
  */
 public class GygApiServiceProvider {
 
+    /**
+     * @param baseUrl base url of service
+     * @param context
+     * Provides API service
+     */
     public static GygService provideGygService(String baseUrl, Context context){
 
         Retrofit retrofit = new Retrofit.Builder()

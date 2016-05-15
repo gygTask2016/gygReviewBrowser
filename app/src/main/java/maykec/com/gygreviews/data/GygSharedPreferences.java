@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 
 /**
  * Created by marko on 5/15/2016.
+ * Helper class to store application data
  */
 public class GygSharedPreferences {
     private static final String PREFS_NAME = "GygPreferences";

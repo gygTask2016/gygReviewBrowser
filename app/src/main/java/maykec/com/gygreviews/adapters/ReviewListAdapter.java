@@ -61,6 +61,7 @@ public class ReviewListAdapter extends RecyclerView.Adapter<ReviewListAdapter.Re
             return;
         }
 
+        //Always adding items because of paging
         for (Review review : data) {
             mReviews.add(review);
         }

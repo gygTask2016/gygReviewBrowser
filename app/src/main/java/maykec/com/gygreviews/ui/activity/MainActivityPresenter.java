@@ -10,6 +10,7 @@ import retrofit2.Response;
 
 /**
  * Created by marko on 5/14/2016.
+ * Presenter class to hold business logic for MainActivity
  */
 public class MainActivityPresenter {
     private static final String TAG = "MainActivityPresenter";
@@ -30,12 +31,16 @@ public class MainActivityPresenter {
 
     }
 
+    /**
+     * @param page
+     * GET request on reviews endpoint with given page
+     */
     public void getReviews(int page) {
         Call<ReviewsResponse> reviewsRequest = mGygService.getReviews(page, mMinRating);
         reviewsRequest.enqueue(new Callback<ReviewsResponse>() {
             @Override
             public void onResponse(Call<ReviewsResponse> call, Response<ReviewsResponse> response) {
-                if (response.body() != null) {
+                if (response.isSuccessful() && response.body() != null) {
                     mView.onReviewsReceived(response.body().getData());
                 } else {
                     //TODO handle error with no body
@@ -60,6 +65,10 @@ public class MainActivityPresenter {
         mView.openPostReviewFragmentDialog(mGygService, mGygSharedPreferences, mockedTourId);
     }
 
+    /**
+     * @param ratingFilter
+     * Sets minimal rating parameter in request
+     */
     public void setRatingFilter(float ratingFilter) {
         mMinRating = (int) ratingFilter;
     }

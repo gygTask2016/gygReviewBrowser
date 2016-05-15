@@ -67,12 +67,21 @@ public class SubmitReviewDialogFragment extends android.app.DialogFragment imple
         }
     }
 
+
+     /**
+      * @param resId
+      * *Shows toast with give resource id
+     */
     @Override
-    public void dismissWithMessage(int submit_success) {
-        Toast.makeText(getActivity(), submit_success, Toast.LENGTH_LONG).show();
+    public void dismissWithMessage(int resId) {
+        Toast.makeText(getActivity(), resId, Toast.LENGTH_LONG).show();
         dismiss();
     }
 
+    /**
+     * @param message
+     * Shows toast message
+     */
     @Override
     public void dismissWithMessage(String message) {
         Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();

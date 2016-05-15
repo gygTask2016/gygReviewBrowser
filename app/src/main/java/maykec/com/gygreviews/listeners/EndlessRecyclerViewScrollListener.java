@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
  *
  * Endless RecyclerView scrolling for different layout managers
  * Changed for this application needs
- * Full source is available on https://gist.github.com/nesquena/d09dc68ff07e845cc622
+ * Full source @see <a href="https://gist.github.com/nesquena/d09dc68ff07e845cc622"</a>
  */
 public abstract  class EndlessRecyclerViewScrollListener extends RecyclerView.OnScrollListener {
     // The minimum amount of items to have below your current scroll position

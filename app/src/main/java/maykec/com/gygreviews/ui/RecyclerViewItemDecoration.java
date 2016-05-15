@@ -11,6 +11,7 @@ import android.view.View;
 
 /**
  * Created by marko on 5/15/2016.
+ * Class to draw dividers between rows in recycler view. Works only in portrait mode!!
  */
 public class RecyclerViewItemDecoration extends RecyclerView.ItemDecoration {
     private static final int[] ATTRS = new int[]{

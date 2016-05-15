@@ -134,6 +134,8 @@ public class MainActivity extends Activity implements MainActivityView, View.OnC
     @Override
     public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
         mPresenter.setRatingFilter(rating);
+
+        //clear current data and request data from page 0
         mReviewsAdapter.clearData();
         mPresenter.getReviews(0);
     }
