@@ -14,6 +14,7 @@ import retrofit2.Response;
  */
 public class MainActivityPresenter {
     private static final String TAG = "MainActivityPresenter";
+    private static final String GYG_SERVICE_ENDPOINT = "https://www.getyourguide.com/";
 
     private MainActivityView mView;
     private GygService mGygService;
@@ -23,7 +24,10 @@ public class MainActivityPresenter {
     private int mMinRating = 0;
 
     public MainActivityPresenter(MainActivity mainActivity) {
-        mGygService = GygApiServiceProvider.provideGygService("https://www.getyourguide.com/",
+
+        //This could be more complex in the case of different build variants
+        //debug, release, staging, ...
+        mGygService = GygApiServiceProvider.provideGygService(GYG_SERVICE_ENDPOINT,
                 mainActivity.getApplicationContext());
         mView = mainActivity;
         mGygSharedPreferences = new GygSharedPreferences(mainActivity.getApplicationContext());

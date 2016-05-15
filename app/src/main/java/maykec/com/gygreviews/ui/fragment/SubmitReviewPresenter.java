@@ -2,6 +2,8 @@ package maykec.com.gygreviews.ui.fragment;
 
 import android.util.Log;
 
+import com.google.gson.Gson;
+
 import maykec.com.gygreviews.R;
 import maykec.com.gygreviews.data.GygSharedPreferences;
 import maykec.com.gygreviews.model.PostReview;
