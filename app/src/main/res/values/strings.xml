@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GyGReviews</string>
+    <string name="action_settings">Settings</string>
+
+
+<!--    main activity resources-->
+    <string name="rating_filter_text">Min rating</string>
+
+<!--    Submit dialog resources-->
+    <string name="submit_review_title">Submit review</string>
+    <string name="submit_review_hint">Write your review here</string>
+    <string name="button_submit">Submit</string>
+    <string name="submit_success">Review has been posted</string>
+</resources>
