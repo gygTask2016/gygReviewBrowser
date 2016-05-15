@@ -16,8 +16,8 @@ Libraries I am using in project are:
 - [https://github.com/google/gson](https://github.com/google/gson "Gson")
 
 
-## Post review ##
-Payload I am sending to post review
+## Submit review ##
+Payload to submit review
 
     {   
 		"tour_id":5465484,
